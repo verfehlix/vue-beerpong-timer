@@ -1,5 +1,5 @@
 <template>
-    <div class='timer'>
+    <div ref="timer" class='timer'>
         <div class="container">
             <div class="row align-items-center justify-content-center">
 
@@ -87,7 +87,7 @@
                 this.$refs.pauseButton.innerText = 'Pause'
             },
             timerFinished: function () {
-                alert('Timer ' + this.timer.id + ' is done!')
+                this.$refs.timer.classList.add('timer-done')
             },
             deleteTimer: function () {
                 this.resetTimer()
@@ -105,6 +105,24 @@
         -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
         -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
         box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+    }
+
+     @keyframes faceBounce {
+        from {
+            -webkit-transform:scale(1);
+        }
+
+        to {
+            -webkit-transform:scale(1.05);
+        }
+    }
+
+    .timer-done {
+        background: rgba(255,0,0,0.5);
+        animation-duration: 0.25s;
+        animation-name: faceBounce;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
     }
 
     .timeDisplay {

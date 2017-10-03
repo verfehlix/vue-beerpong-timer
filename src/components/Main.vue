@@ -9,7 +9,7 @@
 
                 <form class="addNewTimerForm" v-if="this.showNewTimerForm">
                     <div class="row align-items-center justify-content-center">
-                        <div class="col-auto">
+                        <div class="col">
                             <b>Add New Timer:</b>
                         </div>
                         <div class="col-auto">
@@ -17,18 +17,14 @@
                                 <option v-for="team in teams" v-bind:key="team">{{team}}</option>
                             </select>
                         </div>
-                        <div class="col-auto">
-                            <b>VS</b>
-                        </div>
+                        <b>VS</b>
                         <div class="col-auto">
                             <select class="form-control" v-model="selectedTeam2">
                                 <option v-for="team in teams" v-bind:key="team">{{team}}</option>
                             </select>
                         </div>
-                        <div class="col-auto">
-                            <b>Time:</b>
-                        </div>
-                        <div class="col-auto">
+                        <b>Time:</b>
+                        <div class="col">
                             <div class="input-group">
                                 <span class="input-group-btn">
                                     <button class="btn btn-secondary" type="button" v-on:click="changeTimeButtonPressed('-')">-</button>
@@ -44,7 +40,6 @@
                         <div class="col-auto">
                             <button type="button" class="btn btn-block btn-success" v-on:click="addTimer()">Add</button>
                         </div>
-
                     </div>
                 </form>
             </div>
@@ -78,10 +73,12 @@
 
                 ],
                 teams: [
+                    'Die Senftl',
+                    'Team Arschkeks',
                     'Humanbierologen',
-                    'Arminia Bierlefeld',
-                    'King Pong',
-                    'Alkohooligans'
+                    'Im Gonna Put My Balls In Your Beer',
+                    'Hingekotzt und Hingeschissen',
+                    'Wet Balls'
                 ]
             }
         },
@@ -185,6 +182,7 @@
     .addTimerButton {
         margin-bottom: 2em;
         color: #ededed;
+        text-decoration: none;
     }
 
     .addTimerButton:hover {
