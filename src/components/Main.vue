@@ -37,13 +37,13 @@
                         <div class="col-auto">
                             <div class="input-group">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-secondary" type="button">-</button>
+                                    <button class="btn btn-secondary" type="button" v-on:click="changeTimeButtonPressed('-')">-</button>
                                 </span>
 
                                 <input type="text" class="form-control" value="20:00" style="width:65px" v-model="selectedTime">
 
                                 <span class="input-group-btn">
-                                    <button class="btn btn-secondary" type="button">+</button>
+                                    <button class="btn btn-secondary" type="button" v-on:click="changeTimeButtonPressed('+')" >+</button>
                                 </span>
                             </div>
                         </div>
@@ -101,6 +101,31 @@
         methods: {
             toggleShowNewTimerForm: function () {
                 this.showNewTimerForm = !this.showNewTimerForm
+            },
+            formatTime: function (timeInSeconds) {
+                let minutes = parseInt(timeInSeconds / 60, 10)
+                let seconds = parseInt(timeInSeconds % 60, 10)
+
+                minutes = minutes < 10 ? '0' + minutes : minutes
+                seconds = seconds < 10 ? '0' + seconds : seconds
+
+                return minutes + ':' + seconds
+            },
+            changeTimeButtonPressed: function (operator) {
+                if (this.selectedTimeInSeconds <= 0 && operator === '-') {
+                    return
+                }
+
+                let newTime
+
+                if (operator === '+') {
+                    newTime = this.selectedTimeInSeconds + 60
+                } else if (operator === '-') {
+                    newTime = this.selectedTimeInSeconds - 60
+                } else {
+                    newTime = this.selectedTimeInSeconds
+                }
+                this.selectedTime = this.formatTime(newTime)
             },
             addTimer: function () {
                 this.$refs.felixface.classList.add('felixface-active')
