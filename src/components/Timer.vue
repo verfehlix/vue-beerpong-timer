@@ -1,30 +1,30 @@
 <template>
     <div class='timer'>
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>{{ this.formattedTime }}</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h3>{{ timer.team1Name }} VS {{ timer.team2Name }}</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <button ref="startButton" type="button" class="btn btn-success" v-on:click="startTimer()" :disabled="this.isStarted">Start</button>
-                </div>
-                <div class="col-4">
-                    <button ref="pauseButton" type="button" class="btn btn-warning" v-on:click="togglePause()" :disabled="!this.isStarted">Pause</button>
-                </div>
-                <div class="col-4">
-                    <button ref="resetButton" type="button" class="btn btn-danger" v-on:click="resetTimer()">Reset</button>
-                </div>
-            </div>
             <div class="row align-items-center justify-content-center">
-                <button type="button" class="btn btn-link" v-on:click="deleteTimer()">X</button>
+
+                <!-- TIME -->
+                <div class="col-5 timeContainer">
+                    <div class="timeDisplay">{{ this.formattedTime }}</div>
+                </div>
+
+                <!-- TEAMS -->
+                <div class="col-5 teamContainer">
+                    <h1>{{ timer.team1Name }}</h1>
+                    <h3>VS</h3>
+                    <h1>{{ timer.team2Name }}</h1>
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="col-2 buttonContainer">
+                    <button ref="startButton" type="button" class="btn btn-outline-success btn-block" v-on:click="startTimer()" :disabled="this.isStarted">Start</button>
+                    <button ref="pauseButton" type="button" class="btn btn-outline-warning btn-block" v-on:click="togglePause()" :disabled="!this.isStarted">Pause</button>
+                    <button ref="resetButton" type="button" class="btn btn-outline-danger btn-block" v-on:click="resetTimer()">Reset</button>
+                </div>
             </div>
+
+            <button type="button" class="btn btn-link deleteButton" v-on:click="deleteTimer()">x</button>
+
         </div>
     </div>
 </template>
@@ -84,6 +84,7 @@
                 this.timeLeft = this.timer.timeInSec
                 this.isStarted = false
                 this.isPaused = false
+                this.$refs.pauseButton.innerText = 'Pause'
             },
             timerFinished: function () {
                 alert('Timer ' + this.timer.id + ' is done!')
@@ -98,7 +99,27 @@
 
 <style scoped>
     .timer {
-        border: 1px solid black;
-        border-radius: 5px;
+        border-radius: 15px;
+        margin-bottom: 2em;
+        background: rgba(255,255,255,0.2);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+    }
+
+    .timeDisplay {
+        font-size: 8em;
+    }
+
+    .deleteButton {
+        position: absolute;
+        top:-2px;
+        right:15px;
+        color: #ededed;
+    }
+
+    .deleteButton:hover {
+        color: #F22613;
+        text-decoration: none;
     }
 </style>
