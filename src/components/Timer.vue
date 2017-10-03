@@ -3,7 +3,7 @@
         <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>{{ timer.timeInSec }}</h1>
+                <h1>{{ this.formattedTime }}</h1>
             </div>
         </div>
         <div class="row">
@@ -13,13 +13,13 @@
         </div>
         <div class="row">
             <div class="col-4">
-                <button type="button" class="btn btn-outline-success">Start</button>
+                <button ref="startButton" type="button" class="btn btn-success" v-on:click="startTimer()" :disabled="this.isStarted">Start</button>
             </div>
             <div class="col-4">
-                <button type="button" class="btn btn-outline-warning">Pause</button>
+                <button ref="pauseButton" type="button" class="btn btn-warning" v-on:click="togglePause()" :disabled="!this.isStarted">Pause</button>
             </div>
             <div class="col-4">
-                <button type="button" class="btn btn-outline-danger">Reset</button>
+                <button ref="resetButton" type="button" class="btn btn-danger" v-on:click="resetTimer()">Reset</button>
             </div>
         </div>
         </div>
@@ -29,14 +29,66 @@
 <script>
     export default {
 
-        name: 'main',
+        name: 'timer',
         props: ['timer'],
         components: {},
         data () {
-            return {}
+            return {
+                timeLeft: this.timer.timeInSec,
+                interval: undefined,
+                isStarted: false,
+                isPaused: false
+            }
+        },
+        computed: {
+            formattedTime: function () {
+                let minutes = parseInt(this.timeLeft / 60, 10)
+                let seconds = parseInt(this.timeLeft % 60, 10)
+
+                minutes = minutes < 10 ? '0' + minutes : minutes
+                seconds = seconds < 10 ? '0' + seconds : seconds
+
+                return minutes + ':' + seconds
+            }
         },
         created: function () {},
-        methods: {}
+        methods: {
+            startTimer: function () {
+                this.isStarted = true
+                this.interval = setInterval(() => {
+                    if (!this.isPaused) {
+                        this.timeLeft--
+
+                        // this.formattedTime = this.formatTime(this.timeLeft)
+
+                        if (this.timeLeft === 0) {
+                            clearInterval(this.interval)
+                            this.timerFinished()
+                        }
+                    }
+                }, 1000)
+            },
+            togglePause: function () {
+                this.isPaused = !this.isPaused
+                if (this.isPaused) {
+                    this.$refs.pauseButton.innerText = 'Resume'
+                } else {
+                    this.$refs.pauseButton.innerText = 'Pause'
+                }
+            },
+            resetTimer: function () {
+                clearInterval(this.interval)
+                this.timeLeft = this.timer.timeInSec
+                this.isStarted = false
+                this.isPaused = false
+            },
+            formatTime: function (timeLeft) {
+
+            },
+            timerFinished: function () {
+                alert('Timer ' + this.timer.id + ' is done!')
+            }
+        }
     }
 </script>
 

@@ -28,13 +28,13 @@
                 timers: [
                     {
                         id: 1,
-                        timeInSec: 1200,
+                        timeInSec: 10,
                         team1Name: 'Humanbierologen',
                         team2Name: 'Arminia Bierlefeld'
                     },
                     {
                         id: 2,
-                        timeInSec: 1200,
+                        timeInSec: 3,
                         team1Name: 'King Pong',
                         team2Name: 'Alkohooligans'
                     }
