@@ -3,7 +3,7 @@
         <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="title">Beerpong Timer!</div>
+                <div class="title">FELIX' BEERPONG TIMER</div>
 
                 <button type="button" class="btn btn-link addTimerButton" v-on:click="toggleShowNewTimerForm()">Add Timer</button>
 
@@ -134,11 +134,18 @@
 
 <style scoped>
 
+    @font-face {
+        font-family:"Alba";
+        src: url("../assets/fonts/alba.ttf")
+    }
+
     .title {
-        font-size: 4em;
+        font-size: 5em;
         margin-top: 0.2em;
         margin-bottom: 0.2em;
-        color: #F22613;
+        color: #ededed;
+        font-family: 'Alba';
+        text-shadow: 5px 5px #F22613;
     }
 
     .addTimerButton {
