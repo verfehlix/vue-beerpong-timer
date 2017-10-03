@@ -59,8 +59,6 @@
                     if (!this.isPaused) {
                         this.timeLeft--
 
-                        // this.formattedTime = this.formatTime(this.timeLeft)
-
                         if (this.timeLeft === 0) {
                             clearInterval(this.interval)
                             this.timerFinished()
@@ -81,9 +79,6 @@
                 this.timeLeft = this.timer.timeInSec
                 this.isStarted = false
                 this.isPaused = false
-            },
-            formatTime: function (timeLeft) {
-
             },
             timerFinished: function () {
                 alert('Timer ' + this.timer.id + ' is done!')

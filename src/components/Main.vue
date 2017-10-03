@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="row">
-            <div v-for="timer in timers" v-bind:key="timer.id" class="col-6">
+            <div class="col-12" v-for="timer in timers" v-bind:key="timer.id">
                 <Timer v-bind:timer="timer"></Timer>
             </div>
         </div>
@@ -34,6 +34,30 @@
                     },
                     {
                         id: 2,
+                        timeInSec: 3,
+                        team1Name: 'King Pong',
+                        team2Name: 'Alkohooligans'
+                    },
+                    {
+                        id: 3,
+                        timeInSec: 10,
+                        team1Name: 'Humanbierologen',
+                        team2Name: 'Arminia Bierlefeld'
+                    },
+                    {
+                        id: 4,
+                        timeInSec: 3,
+                        team1Name: 'King Pong',
+                        team2Name: 'Alkohooligans'
+                    },
+                    {
+                        id: 5,
+                        timeInSec: 10,
+                        team1Name: 'Humanbierologen',
+                        team2Name: 'Arminia Bierlefeld'
+                    },
+                    {
+                        id: 6,
                         timeInSec: 3,
                         team1Name: 'King Pong',
                         team2Name: 'Alkohooligans'
