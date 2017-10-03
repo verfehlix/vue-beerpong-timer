@@ -1,32 +1,37 @@
 <template>
     <div class='timer'>
         <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1>{{ this.formattedTime }}</h1>
+            <div class="row">
+                <div class="col-12">
+                    <h1>{{ this.formattedTime }}</h1>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h3>{{ timer.team1Name }} VS {{ timer.team2Name }}</h3>
+            <div class="row">
+                <div class="col-12">
+                    <h3>{{ timer.team1Name }} VS {{ timer.team2Name }}</h3>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <button ref="startButton" type="button" class="btn btn-success" v-on:click="startTimer()" :disabled="this.isStarted">Start</button>
+            <div class="row">
+                <div class="col-4">
+                    <button ref="startButton" type="button" class="btn btn-success" v-on:click="startTimer()" :disabled="this.isStarted">Start</button>
+                </div>
+                <div class="col-4">
+                    <button ref="pauseButton" type="button" class="btn btn-warning" v-on:click="togglePause()" :disabled="!this.isStarted">Pause</button>
+                </div>
+                <div class="col-4">
+                    <button ref="resetButton" type="button" class="btn btn-danger" v-on:click="resetTimer()">Reset</button>
+                </div>
             </div>
-            <div class="col-4">
-                <button ref="pauseButton" type="button" class="btn btn-warning" v-on:click="togglePause()" :disabled="!this.isStarted">Pause</button>
+            <div class="row align-items-center justify-content-center">
+                <button type="button" class="btn btn-link" v-on:click="deleteTimer()">X</button>
             </div>
-            <div class="col-4">
-                <button ref="resetButton" type="button" class="btn btn-danger" v-on:click="resetTimer()">Reset</button>
-            </div>
-        </div>
         </div>
     </div>
 </template>
 
 <script>
+    import {EventBus} from '@/eventbus.js'
+
     export default {
 
         name: 'timer',
@@ -82,6 +87,10 @@
             },
             timerFinished: function () {
                 alert('Timer ' + this.timer.id + ' is done!')
+            },
+            deleteTimer: function () {
+                this.resetTimer()
+                EventBus.$emit('deleteTimer', this.timer.id)
             }
         }
     }
