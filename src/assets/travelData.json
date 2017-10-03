@@ -1,0 +1,272 @@
+{
+    "places": [
+        {
+            "id": "sydney",
+            "name": "Sydney",
+            "description": "Sydney ist die Hauptstadt des australischen Bundesstaates New South Wales und mit 5 Millionen Einwohnern die größte Stadt in Australien. Sydney wurde am 26. Januar 1788 gegründet und ist heute das Industrie-, Handels- und Finanzzentrum Australiens und ein wichtiger Tourismusort. Auch zahlreiche Universitäten, Museen und Galerien befinden sich hier. Sydney ist römisch-katholischer und anglikanischer Erzbischofssitz.",
+            "coordinates": {
+                "lat": -33.865143,
+                "lng": 151.209900
+            },
+            "photos": [
+                {
+                    "fileName": "DSC03096.jpg",
+                    "description" : "Waterfall along the Kuranda Scenic Railway Trail"
+                },
+                {
+                    "fileName": "DSC00067.jpg",
+                    "description" : "Sydney Opera House at dusk"
+                },
+                {
+                    "fileName": "DSC00120.jpg",
+                    "description" : "Bondi Bay"
+                },
+                {
+                    "fileName": "DSC00012.jpg",
+                    "description" : "St Marys Cathedral"
+                },
+                {
+                    "fileName": "DSC09946.jpg",
+                    "description" : "Sydney Opera House Roof"
+                },
+                {
+                    "fileName": "DSC09906.jpg",
+                    "description" : "Harbour Bridge"
+                },
+                {
+                    "fileName": "DSC_2038.JPG",
+                    "description": "DSC_2038.JPG"
+                }
+            ]
+        },
+        {
+            "id": "centralcoast",
+            "name": "Central Coast",
+            "description": "The Central Coast is a peri-urban region in the Australian state of New South Wales, located on the Tasman Sea coast north of Sydney and south of Lake Macquarie. The Central Coast has an estimated population of 325,082 as of June 2015, growing at 1% pa. making it the third largest urban area in New South Wales and the ninth largest urban area in Australia. Geographically, the Central Coast is generally considered to include the region bounded by the Hawkesbury River in the south, the Watagan Mountains in the west and the southern end of Lake Macquarie in the north.",
+            "coordinates": {
+                "lat": -33.368384,
+                "lng": 151.474857
+            },
+            "photos": [
+                {
+                    "fileName": "DSC02992.jpg",
+                    "description": "DSC02992.jpg"
+                },
+                {
+                    "fileName": "DSC03005.jpg",
+                    "description": "DSC03005.jpg"
+                },
+                {
+                    "fileName": "DSC03034.jpg",
+                    "description": "DSC03034.jpg"
+                },
+                {
+                    "fileName": "DSC03096.jpg",
+                    "description": "DSC03096.jpg"
+                },
+                {
+                    "fileName": "DSC03101.jpg",
+                    "description": "DSC03101.jpg"
+                },
+                {
+                    "fileName": "DSC_2603.JPG",
+                    "description": "DSC_2603.JPG"
+                },
+                {
+                    "fileName": "DSC_2616.JPG",
+                    "description": "DSC_2616.JPG"
+                },
+                {
+                    "fileName": "DSC_2628.JPG",
+                    "description": "DSC_2628.JPG"
+                },
+                {
+                    "fileName": "DSC_2632.JPG",
+                    "description": "DSC_2632.JPG"
+                }
+            ]
+        },
+        {
+            "id": "newcastle",
+            "name": "Newcastle",
+            "description": "The Newcastle metropolitan area is the second most populated area in the Australian state of New South Wales and includes most of the Newcastle and Lake Macquarie local government areas. It is the hub of the Greater Newcastle area which includes most parts of the local government areas of City of Newcastle, City of Lake Macquarie, City of Cessnock, City of Maitland and Port Stephens Council. Located 162 kilometres (101 mi) north-northeast of Sydney, at the mouth of the Hunter River, it is the predominant city within the Hunter Region. Famous for its coal, Newcastle is the largest coal exporting harbour in the world, exporting just over 161 million tonnes of coal in 2016. Beyond the city, the Hunter Region possesses large coal deposits. Geologically, the area is located in the central-eastern part of the Sydney basin.",
+            "coordinates": {
+                "lat":-32.926696,
+                "lng":151.778892
+            },
+            "photos": [
+                {
+                    "fileName": "DSC00703.jpg",
+                    "description": "DSC00703.jpg"
+                },
+                {
+                    "fileName": "DSC00717.jpg",
+                    "description": "DSC00717.jpg"
+                },
+                {
+                    "fileName": "DSC00720.jpg",
+                    "description": "DSC00720.jpg"
+                },
+                {
+                    "fileName": "DSC_1959.JPG",
+                    "description": "DSC_1959.JPG"
+                },
+                {
+                    "fileName": "DSC_1966.JPG",
+                    "description": "DSC_1966.JPG"
+                },
+                {
+                    "fileName": "DSC_1971.JPG",
+                    "description": "DSC_1971.JPG"
+                },
+                {
+                    "fileName": "DSC_1993.JPG",
+                    "description": "DSC_1993.JPG"
+                },
+                {
+                    "fileName": "DSC_2018.JPG",
+                    "description": "DSC_2018.JPG"
+                },
+                {
+                    "fileName": "DSC_2025.JPG",
+                    "description": "DSC_2025.JPG"
+                },
+                {
+                    "fileName": "DSC_2026.JPG",
+                    "description": "DSC_2026.JPG"
+                },
+                {
+                    "fileName": "DSC_2038.JPG",
+                    "description": "DSC_2038.JPG"
+                },
+                {
+                    "fileName": "DSC_2132.JPG",
+                    "description": "DSC_2132.JPG"
+                }
+            ]
+        },
+        {
+            "id": "nelsonbay",
+            "name": "Nelson Bay",
+            "description": "TEUER! ARGH!",
+            "coordinates": {
+                "lat":-32.72043,
+                "lng":152.14398
+            },
+            "photos": [
+                {
+                    "fileName": "DSC00703.jpg",
+                    "description": "DSC00703.jpg"
+                },
+                {
+                    "fileName": "DSC00717.jpg",
+                    "description": "DSC00717.jpg"
+                },
+                {
+                    "fileName": "DSC00720.jpg",
+                    "description": "DSC00720.jpg"
+                },
+                {
+                    "fileName": "DSC_1959.JPG",
+                    "description": "DSC_1959.JPG"
+                },
+                {
+                    "fileName": "DSC_1966.JPG",
+                    "description": "DSC_1966.JPG"
+                },
+                {
+                    "fileName": "DSC_1971.JPG",
+                    "description": "DSC_1971.JPG"
+                },
+                {
+                    "fileName": "DSC_1993.JPG",
+                    "description": "DSC_1993.JPG"
+                },
+                {
+                    "fileName": "DSC_2018.JPG",
+                    "description": "DSC_2018.JPG"
+                },
+                {
+                    "fileName": "DSC_2025.JPG",
+                    "description": "DSC_2025.JPG"
+                },
+                {
+                    "fileName": "DSC_2026.JPG",
+                    "description": "DSC_2026.JPG"
+                },
+                {
+                    "fileName": "DSC_2038.JPG",
+                    "description": "DSC_2038.JPG"
+                },
+                {
+                    "fileName": "DSC_2132.JPG",
+                    "description": "DSC_2132.JPG"
+                },
+                {
+                    "fileName": "DSC02992.jpg",
+                    "description": "DSC02992.jpg"
+                },
+                {
+                    "fileName": "DSC03005.jpg",
+                    "description": "DSC03005.jpg"
+                },
+                {
+                    "fileName": "DSC03034.jpg",
+                    "description": "DSC03034.jpg"
+                },
+                {
+                    "fileName": "DSC03096.jpg",
+                    "description": "DSC03096.jpg"
+                },
+                {
+                    "fileName": "DSC03101.jpg",
+                    "description": "DSC03101.jpg"
+                },
+                {
+                    "fileName": "DSC_2603.JPG",
+                    "description": "DSC_2603.JPG"
+                },
+                {
+                    "fileName": "DSC_2616.JPG",
+                    "description": "DSC_2616.JPG"
+                },
+                {
+                    "fileName": "DSC_2628.JPG",
+                    "description": "DSC_2628.JPG"
+                },
+                {
+                    "fileName": "DSC_2632.JPG",
+                    "description": "DSC_2632.JPG"
+                },
+                {
+                    "fileName": "DSC03096.jpg",
+                    "description" : "Waterfall along the Kuranda Scenic Railway Trail"
+                },
+                {
+                    "fileName": "DSC00067.jpg",
+                    "description" : "Sydney Opera House at dusk"
+                },
+                {
+                    "fileName": "DSC00120.jpg",
+                    "description" : "Bondi Bay"
+                },
+                {
+                    "fileName": "DSC00012.jpg",
+                    "description" : "St Marys Cathedral"
+                },
+                {
+                    "fileName": "DSC09946.jpg",
+                    "description" : "Sydney Opera House Roof"
+                },
+                {
+                    "fileName": "DSC09906.jpg",
+                    "description" : "Harbour Bridge"
+                },
+                {
+                    "fileName": "DSC_2038.JPG",
+                    "description": "DSC_2038.JPG"
+                }
+            ]
+        }
+    ]
+}
