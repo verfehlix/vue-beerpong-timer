@@ -14,10 +14,7 @@
                         </div>
                         <div class="col-auto">
                             <select class="form-control" v-model="selectedTeam1">
-                                <option>Humanbierologen</option>
-                                <option>Arminia Bierlefeld</option>
-                                <option>King Pong</option>
-                                <option>Alkohooligans</option>
+                                <option v-for="team in teams" v-bind:key="team">{{team}}</option>
                             </select>
                         </div>
                         <div class="col-auto">
@@ -25,10 +22,7 @@
                         </div>
                         <div class="col-auto">
                             <select class="form-control" v-model="selectedTeam2">
-                                <option>Humanbierologen</option>
-                                <option>Arminia Bierlefeld</option>
-                                <option>King Pong</option>
-                                <option>Alkohooligans</option>
+                                <option v-for="team in teams" v-bind:key="team">{{team}}</option>
                             </select>
                         </div>
                         <div class="col-auto">
@@ -82,6 +76,12 @@
                 lastId: 0,
                 timers: [
 
+                ],
+                teams: [
+                    'Humanbierologen',
+                    'Arminia Bierlefeld',
+                    'King Pong',
+                    'Alkohooligans'
                 ]
             }
         },
@@ -89,6 +89,10 @@
             selectedTimeInSeconds: function () {
                 const minutePart = parseInt(this.selectedTime.split(':')[0])
                 const secondPart = parseInt(this.selectedTime.split(':')[1])
+
+                if (isNaN(minutePart) || isNaN(secondPart)) {
+                    alert('INCORRECT TIME FORMAT! PLEASE USE MM:SS!')
+                }
 
                 return minutePart * 60 + secondPart
             }
@@ -108,6 +112,11 @@
 
                 minutes = minutes < 10 ? '0' + minutes : minutes
                 seconds = seconds < 10 ? '0' + seconds : seconds
+
+                if (isNaN(minutes) || isNaN(seconds)) {
+                    alert(
+                        'INCORRECT TIME FORMAT! PLEASE USE MM:SS!')
+                }
 
                 return minutes + ':' + seconds
             },
