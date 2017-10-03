@@ -134,6 +134,7 @@
         top:-2px;
         right:15px;
         color: #ededed;
+        text-decoration: none;
     }
 
     .deleteButton:hover {

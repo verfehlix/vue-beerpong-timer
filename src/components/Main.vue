@@ -202,6 +202,7 @@
 
     .addButton {
         color: #ededed;
+        text-decoration: none;
     }
 
     .addButton:hover {
