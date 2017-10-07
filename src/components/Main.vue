@@ -78,7 +78,8 @@
                     'Humanbierologen',
                     'Im Gonna Put My Balls In Your Beer',
                     'Hingekotzt und Hingeschissen',
-                    'Wet Balls'
+                    'Wet Balls',
+                    'Team OB - In Der Regel Voll'
                 ]
             }
         },
