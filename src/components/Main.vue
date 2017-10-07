@@ -76,7 +76,7 @@
                     'Die Senftl',
                     'Team Arschkeks',
                     'Humanbierologen',
-                    'Im Gonna Put My Balls In Your Beer',
+                    'Im Gonna Put My Balls In YouTube Beer',
                     'Hingekotzt und Hingeschissen',
                     'Wet Balls',
                     'Team OB - In Der Regel Voll'
